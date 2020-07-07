@@ -1,0 +1,20 @@
+t = int(input())
+
+def evenodd(word):
+    even = []
+    odd = []
+    for i in range(len(word)):
+        if i%2 == 0:    
+            even.append(word[i])
+        if i %2 != 0:
+            odd.append(word[i])
+    even1 = ''.join(map(str, even))
+    odd1 = ''.join(map(str, odd))
+    return even1 + " " + odd1
+
+
+
+for p in range(t):
+    word = list(input().strip())
+    ans = evenodd(word)
+    print(ans)

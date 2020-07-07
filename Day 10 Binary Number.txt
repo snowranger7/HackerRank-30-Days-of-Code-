@@ -1,0 +1,21 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+def DecimalToBinary(n):
+    binary = len(max(bin(n).replace('0b', '').strip().split('0')))
+    #num = binary.strip()
+    #num2 = num.split('0')
+    #num3 = max(num2)
+    #num4 = len(num3)
+    print(binary)
+
+
+if __name__ == '__main__':
+    n = int(input())
+    if n > 0:
+        DecimalToBinary(n)
