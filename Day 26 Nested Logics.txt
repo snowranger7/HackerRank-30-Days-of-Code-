@@ -1,0 +1,27 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+actual_date = list(map(int, input().strip().split()))
+
+expected_date = list(map(int, input().strip().split()))
+
+def fine(actual_date, expected_date):
+    if actual_date[2] < expected_date[2]:
+        print("0")
+
+    if actual_date[2] > expected_date[2]:
+        print("10000")
+
+    if actual_date[2] == expected_date[2]:
+        if actual_date[1] > expected_date[1]:
+            print(500*(actual_date[1] - expected_date[1]))
+        if actual_date[1] < expected_date[1]:
+            print("0")
+
+        if actual_date[1] == expected_date[1]:
+            if actual_date[0] < expected_date[0]:
+                print("0")
+            if actual_date[0] > expected_date[0]:
+                print(15*(actual_date[0] - expected_date[0]))
+        
+
+
+p = fine(actual_date, expected_date)
